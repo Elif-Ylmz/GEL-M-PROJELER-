@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> Ruha Fısıldayan Taşlar | VELORA </title>
+     <script src="https://kit.fontawesome.com/1e4da1cc23.js" crossorigin=" anonymous">  </script>
+    <link rel="stylesheet" href="css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="image/LOGO.JPG" type="image/x-icon">
+  <style>
+    /* Header ve Menü */
+    header {
+      position: relative;
+      z-index: 10; 
+    }
+
+    .menu ul {
+      position: relative;
+      z-index: 10; 
+    }
+
+    .sub-menu-1 {
+      position: absolute;
+      background-color: white;
+      display: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu li:hover .sub-menu-1 {
+      display: block;
+      z-index: 15; 
+    }
+
+    /* Kayan Yazı */
+    .scrolling-text {
+      background-color: #074d13; 
+      color: #cacac9; 
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 5; 
+    }
+
+    .scrolling-text p {
+      display: inline-block;
+      animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+          <div class="logo">
+            <a href="index.html"> <img src="image/VELORA.jpg" ></a>
+          </div>
+         <div class="menu">
+          <ul>
+       <li > <a href="index.html">ANASAYFA</a></li> 
+       <li> <a href="#" >DOĞAL TAŞLAR</a>
+
+        <div class="sub-menu-1">
+          <ul>
+            <li><a href="Akiktaşı.html" target="_blank">AKİK TAŞI</a></li>
+            <li><a href="Ametisttaşı.html" target="_blank">AMETİST TAŞI</a></li>
+            <li><a href="Anyolittaşı.html" target="_blank">ANYOLİT TAŞI</a></li>
+            <li><a href="Apetittaşı.html" target="_blank">APETİT TAŞI</a></li>
+            <li><a href="Florittaşı.html" target="_blank">FLORİT TAŞI</a></li>
+            <li><a href="Güneştaşı.html" target="_blank">GÜNEŞ TAŞI</a></li>
+            <li><a href="Melektaşı.html" target="_blank">MELEK TAŞI</a></li>
+            <li><a href="İnci.html" target="_blank">İNCİ</a></li>
+          </ul>
+        </div>
+      </li>
+       <li> <a href="#">KOLEKSİYONLAR</a>
+        <div class="sub-menu-1">
+          <ul>
+            <li><a href="BurçKoleksiyonu.html" target="_blank">BURÇ KOLEKSİYONU</a></li>
+            <li><a href="İnciKoleksiyonu.html" target="_blank">İNCİ KOLEKSİYONU</a></li>
+            <li><a href="RenkKoleksiyonu.html" target="_blank">RENK KOLEKSİYONU</a></li>
+          </ul>
+        </div>
+      </li>
+       <li> <a href="İletişim.html"target="_blank"> İLETİŞİM </a></li>
+        </ul>
+      </div>
+<div class="buttons">
+        <button>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button>
+          <a href="kullanıcıKayıt.html" target="_blank"><i class="fa-solid fa-user-plus" style="color: black;"></i></a>
+        </button>        
+        <button>
+          <a href="kullanıcıKayıt.html" target="_blank"><i class="fa-solid fa-user" style="color: black;"></i></a>
+        </button>
+      </div>
+      </div>
+     
+  </header>
+  <div class="scrolling-text">
+    <p>   🌟   🎄 ⋆. 𐙚 ˚ Yeni Yıla Özel Büyük İndirim Fırsatı 'Sepette %10 İndirim !'  ⋆. 𐙚 ˚🎄🌟  </p>
+  </div>
+
+    <!--MAIN SECTİON-->
+
+  <section id="mainSlider" class="slider">
+    <div id="mainCaption" class="caption">
+      <h1>TAŞLARIN EŞSİZ BÜYÜSÜNE KAPILIN</h1>
+      <p> DOĞAL TAŞLARI  "VELORA"  İLE KEŞFET</p>
+    </div>
+  </section>
+
+  <!--FUTURE SECTİON = KOLEKSİYON KISMI-->
+
+  <section id="koleksiyon" class="sectionArea">
+    <div class="burcTop">
+      <h2 class="sectionHeader"> KOLEKSİYONLAR </h2>
+      <p>  <h1 >  "TASARLIYORUZ, ÜRETİYORUZ"</h1></p>
+    </div>
+    <div class="featuresBody">
+      <div class="container">
+        <div class="col3">
+          <div class="item">
+            <div class="zoom">
+              <img src="image/pem6.jpg" >
+            </div>
+            <div class="itemText">
+              <h2> ~ BURÇ KOLEKSİYONU ~</h2>
+              <p>"Burç koleksiyonu, her bir burcun enerjisini ve özelliklerini yansıtan benzersiz tasarımlarla,
+                 astrolojiyi sanatla buluşturuyor."</p>
+                <a href="BurçKoleksiyonu.html" class="btnDetails" target="_blank"> KEŞFET </a>
+            </div>
+          </div>
+        </div>   
+        <div class="col3">
+               <div class="item">
+            <div class="zoom">
+              <img src="image/inc.jpg" >
+            </div>
+            <div class="itemText">
+              <h2> ~ İNCİ KOLEKSİYONU ~</h2>
+              <p>"İnci koleksiyonu, doğanın zarif ve nadir hediyesi olan incilerin eşsiz güzelliğini, modern tasarımlarla harmanlayarak
+                 her bir parçada zarafet, şıklık ve zarif bir ışıltı sunuyor."" </p>
+                <a href="İnciKoleksiyonu.html" class="btnDetails" target="_blank"> KEŞFET </a>
+      </div>
+    </div>
+</div>  
+<div class="col3">
+  <div class="item">
+    <div class="zoom">
+      <img src="image/b4 (1).jpg" >
+    </div>
+    <div class="itemText">
+      <h2>~ RENK KOLEKSİYONU ~ </h2>
+      <p>"Renk koleksiyonu, doğanın en canlı tonlarını bir araya getirerek
+        her parçada enerjiyi ve dinamizmi yansıtıyor."" </p>
+        <a href="RenkKoleksiyonu.html " class="btnDetails" target="_blank"> KEŞFET </a>
+  </section>
+    <!--PARALLAX SECTİON= DOĞALTAŞ BİLGİ HATIRLATMASI-->
+   <section id="parallax" class="sectionArea">
+    <div class="parallaxTop">
+      <h2 class="sectionHeader"> FEATURED SERVICE </h2>
+      <p> ~Doğal taşlar hakkında bilmediklerinizi , doğal taşlar platformumuzda öğrenip daha keyifli alışveriş yapın :) ~</p>
+    </div>
+   </section>
+<br><br><br>
+
+ <!--ENGINE FOOTER SECTİON-->
+
+ <footer class="sectionArea">
+  <div class="container">
+    <div class="col3">
+      <div class="footerItem">
+        <h3> WELCOME TO OUR SITE</h3> <br>
+        <a href="index.html"><img src="image/VELORA.jpg"></a> <br> <br> <br>
+        <p> ~Doğal Taşları keşfetmek için önce bizi keşfetmeniz gerekir. ~ </p> <br>
+        <p> - VELORA -</p>
+
+
+      </div>
+    </div>
+    
+    <div class="col3">
+      <div class="footerItem">
+        <h3 > QUICK LINKS</h3> <br>
+       <ul class="footerLinks">
+        <li><a href="index.html"> ANASAYFA </a></li> <br>
+        <li><a href="index.html"> DOĞAL TAŞLAR </a></li> <br>
+        <li><a href="index.html"> KOLEKSİYONLAR </a></li> <br>
+        <li><a href="İletişim.html"> İLETİŞİM </a></li> <br>
+       </ul>
+  </div>
+  </div>
+  <div class="col3">
+    <div class="footerItem">
+      <h3> BE SOCIAL WITH US </h3>
+      <br><br><br>
+             <ul class="socialLinks">
+            <li><a href="#"><i class="fa-brands fa-facebook" style="color: white;"> </i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter" style="color: white;"> </i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram " style="color: white;"> </i></a></li>
+            </ul>
+            </div>
+        </div>
+       </div>
+     </footer>
+</body>
+</html>

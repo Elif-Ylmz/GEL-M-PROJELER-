@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GİRİŞ YAP & KAYIT OL | VELORA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background-color: #eeeded;
+            color: #fff;
+        }
+
+        .main-container {
+            display: flex;
+            height: 600px;
+            width: 100%;
+            margin-right: 150px;
+            margin-top: 60px;
+
+        }
+
+        
+        .left-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-section img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 50px;
+        }
+
+        
+        .right-section {
+            width: 700px;
+            background-color: #ececec;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+        }
+
+        .right-section.hidden {
+            display: none;
+        }
+
+        .right-section h2 {
+            color: #0a5721;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            color: #0b5323;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus {
+            border-color: #2E7D32;
+            box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+            outline: none;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #053508;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #1B5E20;
+        }
+
+        .form-group .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .toggle-link {
+            margin-top: 10px;
+            color: #216825;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .toggle-link:hover {
+            text-decoration: none;
+        }
+        .marquee {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            background-color: #1B5E20;
+            color: #fff;
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .marquee p {
+            display: inline-block;
+            white-space: nowrap;
+            padding-right: 100%;
+            animation: marquee-left-to-right 20s linear infinite;
+        }
+
+        @keyframes marquee-left-to-right {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="marquee">
+       <p>   ⋆. 𐙚 ˚ 🌟  Sitemizi keşfetmeye hoşgeldiniz! Umarım keyifli bir keşif yaparsınız! 🌟 ⋆. 𐙚 ˚  </p>
+    </div>
+    
+
+    <div class="main-container">
+        
+        <div class="left-section">
+        
+            <img src="kullanıcısayfa img/kayıtfoto.jpg.svg" >
+        </div>
+
+        
+        <div class="right-section login-form">
+            <h2>GİRİŞ YAP</h2>
+            <div class="form-group">
+                <label for="login-email">EMAİL</label>
+                <input type="email" id="login-email" placeholder="E-mail giriniz...">
+                <div class="error" id="login-email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="login-password">ŞİFRE</label>
+                <input type="password" id="login-password" placeholder="Şifrenizi giriniz...">
+            </div>
+            <div class="form-group">
+                <button onclick="handleLogin()">GİRİŞ</button>
+            </div>
+            <div class="toggle-link" onclick="showRegister()">Üye değil misin? Buradan kayıt ol :) </div>
+        </div>
+
+        <div class="right-section register-form hidden">
+            <h2>KAYIT OL</h2>
+            <div class="form-group">
+                <label for="register-name">AD</label>
+                <input type="text" id="register-name" placeholder="İsminizi giriniz...">
+            </div>
+            <div class="form-group">
+                <label for="register-email">EMAİL</label>
+                <input type="email" id="register-email" placeholder="E-mail giriniz...">
+                <div class="error" id="register-email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="register-password">ŞİFRE</label>
+                <input type="password" id="register-password" placeholder="Şifrenizi giriniz...">
+            </div>
+            <div class="form-group">
+                <button onclick="handleRegister()">KAYIT OL</button>
+            </div>
+            <div class="toggle-link" onclick="showLogin()"> Üye misin? Buradan giriş yap :)</div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.querySelector('.login-form');
+        const registerForm = document.querySelector('.register-form');
+
+        function showRegister() {
+            loginForm.classList.add('hidden');
+            registerForm.classList.remove('hidden');
+        }
+
+        function showLogin() {
+            registerForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        }
+
+        function handleLogin() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const emailError = document.getElementById('login-email-error');
+
+            emailError.textContent = '';
+
+            if (!email.includes('@')) {
+                emailError.textContent = 'Email "@" ile başlamalıdır!';
+                return;
+            }
+
+            if (!password) {
+                alert('Lütfen şifreyi giriniz.');
+                return;
+            }
+
+            alert(`Giriş yapıldı: ${email}`);
+        }
+
+        function handleRegister() {
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const emailError = document.getElementById('register-email-error');
+
+            emailError.textContent = '';
+
+            if (!email.includes('@')) {
+                emailError.textContent = 'Email "@" ile başlamalıdır!';
+                return;
+            }
+
+            if (!name || !password) {
+                alert('Lütfen tüm alanları doldurun!');
+                return;
+            }
+
+            alert(`Başarıyla kayıt oldunuz! Hoş geldiniz, ${name}`);
+        }
+    </script>
+</body>
+</html>
